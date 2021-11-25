@@ -15,9 +15,7 @@ body {
     background-color: #f1f0f0;
     font-family: 'Open Sans', sans-serif;
 
-
     display: grid;
-
     grid-template-rows: 1fr;
     grid-template-columns: 80px 1fr 80px;
     grid-gap: 20px;
@@ -33,11 +31,6 @@ nav ul.nav-menu {
     text-align: center;
 }
 
-nav ul.nav-menu li.menu-item {
-    display: inline-block;
-    /* margin: 10px 0px; */
-}
-
 nav ul.nav-menu li.menu-item:not(:last-child) {
     margin-bottom: 10px;
 }
@@ -47,17 +40,14 @@ nav ul.nav-menu li.menu-item a {
     text-decoration: none;
     padding: 24px 12px;
     color: #000;
-
     writing-mode: vertical-rl;
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: vertical-rl;
-
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
-
     transform: rotate(-180deg);
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
@@ -66,15 +56,13 @@ nav ul.nav-menu li.menu-item a {
 }
 
 nav ul.nav-menu li.menu-item a:hover {
-    box-shadow: inset -2px -2px 8px rgba(0, 0, 0, .15),
-        inset -2px -2px 8px rgba(255, 255, 255, 0.1),
-        inset 2px 2px rgba(255, 255, 255, 0.5),
-        inset 2px 2px 8px rgba(255, 255, 255, 1);
+    box-shadow: inset -2px -2px 8px rgba(0, 0,0 , .15),
+                inset -2px -2px 8px rgba(255, 255, 255, 0.1),
+                inset 2px 2px rgba(255, 255, 255, 0.5),
+                inset 2px 2px 8px rgba(255, 255, 255, 1);
 }
 
 main {
-    /* grid-area: main; */
-
     display: grid;
     grid-template-rows: 100px 1fr;
 }
@@ -99,7 +87,7 @@ main header .logo {
 main header .logo img {
     margin-right: 20px;
     max-width: 80%;
-    height: auo;
+    height: auto;
 }
 
 main .wrapper {
@@ -116,16 +104,15 @@ main .wrapper .hero {
     width: 100%;
 
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
 }
 
 main .wrapper .hero h1 {
     font-size: 60px;
     line-height: 140%;
     font-weight: 700;
-
     margin-bottom: 25px;
 }
 
@@ -144,17 +131,11 @@ main .wrapper .hero button.btn-action {
     padding: 15px;
     border: none;
     font-size: 16px;
-    line-height: 24px;
     font-weight: 500;
-    letter-spacing: .7px;
+    line-height: 24px;
     color: #000;
     cursor: pointer;
-
-    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-        -2px -2px 8px rgba(255, 255, 255, 0.5),
-        inset 2px 2px rgba(255, 255, 255, 0.1),
-        2px 2px 10px rgba(0, 0, 0, .15);
-
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),                2px 2px 8px rgba(255, 255, 255, 0.5),                inset 2px 2px rgba(255, 255, 255, 0.1),                2px 2px 10px rgba(0, 0,0 , .15);
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -162,8 +143,8 @@ main .wrapper .hero button.btn-action {
     -o-border-radius: 50px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 main .wrapper .hero button.btn-action i {
@@ -172,10 +153,10 @@ main .wrapper .hero button.btn-action i {
 }
 
 main .wrapper .hero button.btn-action:hover {
-    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
-        inset -2px -2px 8px rgba(255, 255, 255, 0.5),
-        inset 2px 2px rgba(255, 255, 255, 0.1),
-        inset 2px 2px 8px rgba(0, 0, 0, .15);
+    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),                
+                inset 2px 2px 8px rgba(255, 255, 255, 0.5),                
+                inset 2px 2px rgba(255, 255, 255, 0.1),                
+                inset 2px 2px 10px rgba(0, 0,0 , .15);
 }
 
 main .wrapper .player {
@@ -188,11 +169,12 @@ main .wrapper .player lottie-player {
     height: 550px;
 }
 
+/* Mouse Animation */
+
 main .wrapper .mouse-icon {
     color: rgb(170, 168, 170);
     visibility: inherit;
     transform-origin: 50% 50%;
-    transform: translate3d(-20px, 0px, 0px);
     font-size: 40px;
     position: absolute;
     bottom: 5%;
@@ -203,13 +185,11 @@ main .wrapper .mouse-icon {
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
-
     animation: bounce 1s infinite alternate;
     -webkit-animation: bounce 1s infinite alternate;
     cursor: pointer;
 }
 
-/* ANIMATION */
 @keyframes bounce {
     from {
         transform: translateY(0px);
@@ -225,28 +205,10 @@ main .wrapper .mouse-icon {
         -moz-transform: translateY(-15px);
         -ms-transform: translateY(-15px);
         -o-transform: translateY(-15px);
-    }
+}
 }
 
-@-webkit-keyframes bounce {
-    from {
-        transform: translateY(0px);
-        -webkit-transform: translateY(0px);
-        -moz-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-        -o-transform: translateY(0px);
-    }
-
-    to {
-        transform: translateY(-15px);
-        -webkit-transform: translateY(-15px);
-        -moz-transform: translateY(-15px);
-        -ms-transform: translateY(-15px);
-        -o-transform: translateY(-15px);
-    }
-}
-
-/* ASIDE */
+/* Aside */
 aside {
     margin: 50px 0;
 
@@ -274,7 +236,7 @@ aside ul.social-list li.social-item {
     font-size: 22px;
     line-height: 32px;
     color: rgb(170, 168, 170);
-    padding: 10px 10px;
+    padding: 10px;
     text-align: center;
     cursor: pointer;
 }
